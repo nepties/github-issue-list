@@ -29,8 +29,16 @@ export class IssuesStore {
         };
       });
 
+      const sortedIssues = formattedIssues.sort((issueA, issueB) => {
+        if (issueA.comments === issueB.comments) {
+          return issueA.number > issueB.number ? -1 : 1;
+        }
+
+        return issueA.comments > issueB.comments ? -1 : 1;
+      });
+
       runInAction(() => {
-        this.issues = formattedIssues;
+        this.issues = sortedIssues;
       });
     } catch (error) {
       console.log(error);
