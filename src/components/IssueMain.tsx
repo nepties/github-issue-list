@@ -53,7 +53,7 @@ const IssueMain = observer(() => {
                 {issue.comments}
               </Typography>
             </ListItem>
-            <Divider />
+            <Divider key={index} />
           </>
         ))}
       </List>
