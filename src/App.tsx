@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./components/Header";
+import IssuePage from "./components/IssuePage";
 
 const App = () => {
-  return <Header />;
+  return <IssuePage />;
 };
 
 export default App;

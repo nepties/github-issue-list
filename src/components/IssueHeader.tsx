@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-const Header = () => {
+const IssueHeader = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -24,4 +24,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default IssueHeader;
