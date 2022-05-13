@@ -5,14 +5,16 @@ import useIssuesStore from "./useIssueStore";
 import {
   Avatar,
   Box,
+  Divider,
   List,
   ListItem,
   ListItemAvatar,
   ListItemText,
   Typography,
 } from "@mui/material";
+import ModeCommentOutlinedIcon from "@mui/icons-material/ModeCommentOutlined";
+
 import { Issue } from "types/types";
-import { Divider } from "@mui/material";
 
 const IssueMain = observer(() => {
   const { issues, fetchIssues } = useIssuesStore();
@@ -23,7 +25,7 @@ const IssueMain = observer(() => {
 
   return (
     <Box sx={{ width: "1280px", marginLeft: "auto", marginRight: "auto" }}>
-      <Box sx={{ width: "100%", padding: "15px" }}>
+      <Box sx={{ width: "100%", padding: "15px 0px 0px 15px" }}>
         <Typography variant="h6" component="div">
           facebook/create-react-app
         </Typography>
@@ -42,6 +44,14 @@ const IssueMain = observer(() => {
                   10,
                 )} by ${issue.nickname}`}
               />
+              <ModeCommentOutlinedIcon />
+              <Typography
+                variant="caption"
+                display="block"
+                sx={{ paddingLeft: "5px" }}
+              >
+                {issue.comments}
+              </Typography>
             </ListItem>
             <Divider />
           </>
