@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import IssueHeader from "./IssueHeader";
 import { IssuesStore, IssuesStoreContext } from "./useIssueStore";
-// import IssuesMain from "./components/IssuesMain";
+import IssueMain from "./IssueMain";
 
 const IssuePage = () => {
   const [issuesStore] = useState(new IssuesStore());
@@ -10,7 +10,7 @@ const IssuePage = () => {
     <IssuesStoreContext.Provider value={issuesStore}>
       <div className="container">
         <IssueHeader />
-        {/* <IssuesMain /> */}
+        <IssueMain />
       </div>
     </IssuesStoreContext.Provider>
   );
